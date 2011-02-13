@@ -3,17 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>nop</string>
+	<string>saveActiveFile</string>
 	<key>command</key>
 	<string>"${TM_NODE:-node}" "$TM_BUNDLE_SUPPORT/compiler.js"</string>
 	<key>input</key>
 	<string>document</string>
 	<key>keyEquivalent</key>
-	<string>@O</string>
+	<string>@s</string>
 	<key>name</key>
 	<string>CoffeeScript Lint</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.coffee</string>
 	<key>uuid</key>
 	<string>030C146F-6D92-420E-A45B-FF2179483533</string>
 </dict>
