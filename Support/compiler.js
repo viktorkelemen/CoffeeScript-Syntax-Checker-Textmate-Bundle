@@ -4177,7 +4177,6 @@ if (typeof module !== 'undefined' && require.main === module) {
 }()
 
 /** Command line code **/
-console.log("CoffeeScript Compiler v1.1.0-pre");
 
 var data;
 
@@ -4189,5 +4188,9 @@ process.stdin.on('data', function (chunk) {
 });
 
 process.stdin.on('end', function () {
-	CoffeeScript.compile(data);
+	try {
+		CoffeeScript.compile(data);
+	} catch (e) {
+		console.log(e.message);
+	};
 });
